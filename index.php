@@ -112,23 +112,23 @@
 
                 <h2>Adicione uma nova foto a sua galeria</h2>
 
-                <form>
+                <form action="uploadFiles.php" method="POST">
 
                     <div class="form-group">
 
                         <Label for="inputImageTitle">Título da Foto:</Label>
-                        <input type="text" name="imageTitle" id="inputImageTitle">
+                        <input type="text" name="imageTitle" id="inputImageTitle" required>
 
                     </div>
 
                     <div class="form-group">
 
                         <label for="selectFilesInput">Escolha a sua foto:</label>
-                        <input type="file" name="selectFilesInput" id="selectFilesInput">
+                        <input type="file" name="selectFilesInput" id="selectFilesInput" required>
 
                     </div>
 
-                    <button type="button" name="buttonSendFiles" id="buttonSendFiles">Adicionar Foto</button>
+                    <button type="submit" name="buttonSendFiles" id="buttonSendFiles">Adicionar Foto</button>
 
                 </form>
 
