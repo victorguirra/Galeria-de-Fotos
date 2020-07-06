@@ -122,7 +122,11 @@
 
             <div class="wrapperImages">
 
-                
+                <?php
+
+                    include_once 'showDataFromDB.php';
+
+                ?>
 
             </div>
 
