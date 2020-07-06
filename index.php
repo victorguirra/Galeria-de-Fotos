@@ -93,7 +93,7 @@
                 margin-top:30px;
                 width:60%;
                 cursor:pointer;
-                transition:0.6s;
+                transition:0.4s;
             }
 
             #buttonSendFiles:hover{
@@ -114,7 +114,7 @@
                 margin-top:30px;
                 border-radius:10px;
                 cursor:pointer;
-                transition:0.5s;
+                transition:0.4s;
             }
 
             #buttonViewGallery:hover{
@@ -172,7 +172,7 @@
 
             <button type="submit" name="buttonViewGallery" id="buttonViewGallery">
             
-                <a href="">Ver Minha Galeria</a>
+                <a href="myGallery.php">Ver Minha Galeria</a>
 
             </button>
 
