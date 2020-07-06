@@ -24,7 +24,7 @@ $resultConsult = mysqli_query($connect, $consult) or die (mysqli_error($connect,
 
                 <button class="buttonEdit">
                 
-                    <a href="editar.php?id=<?php echo $data['id'] ?>">Editar</a>
+                    <a href="edit.php?id=<?php echo $data['id'] ?>">Editar</a>
                     
                 <button>
 
