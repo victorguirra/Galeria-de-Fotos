@@ -11,15 +11,20 @@ $resultConsult = mysqli_query($connect, $consult) or die (mysqli_error($connect,
 <?php  
     
     while($data = mysqli_fetch_array($resultConsult)){
+        
+?>  
 
-?>
+        <div class="cardImage">
 
-    <h1><?php echo $data['titlePhoto']?></h1>
+            <h1><?php echo $data['titlePhoto']; ?></h1>
 
-    <img src="./images/<?php $data['namePhoto'] ?>"
+            <img src="Images/<?php echo $data['namePhoto'] ?>" class="imageGalery">
+
+        </div>
+
 <?php
 
-    }
+    }   
 
 ?>
     

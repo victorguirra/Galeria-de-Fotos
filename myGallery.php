@@ -87,6 +87,15 @@
                 flex-direction:row;
                 flex-wrap:wrap;
                 justify-content:space-around;
+            }
+            
+            .cardImage{
+                background-color:#ff0;
+            }
+
+            .imageGalery{
+                width:120px;
+                height:120px;
             }   
 
         </style>
@@ -126,7 +135,7 @@
                 <?php
 
                     include_once 'showDataFromDB.php';
-
+                        
                 ?>
 
             </div>
