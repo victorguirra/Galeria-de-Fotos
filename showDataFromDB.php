@@ -28,7 +28,11 @@ $resultConsult = mysqli_query($connect, $consult) or die (mysqli_error($connect,
                     
                 <button>
 
-                <button class="buttonDelete">Apagar<button>
+                <button class="buttonDelete">
+                
+                    <a href="delete.php?id=<?php echo $data['id']?>">Apagar</a>
+                    
+                <button>
 
             </div>
 

@@ -1,10 +1,9 @@
-
 <html>
 
     <head>
 
-        <Meta charset="UTF-8">
-        <Title>Galeria de Fotos</Title>
+        <meta charset="UTF-8">
+        <Title>Minha Galeria</Title>
         <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
         <style>
 
@@ -18,163 +17,182 @@
                 font-family:'Oswald', sans-serif;
             }
 
-            .wrapper{
-                width:100%;
-                height:100vh;
+            header{
+                background-color:#581b98;
+                color:#fff;
+                display:flex;
+                flex-direction:row;
+                align-items:center;
+                justify-content:center;
+                padding:20px;
+            }
+
+            #galleryIcon{
+                width:70px;
+                height:70px;
+                margin-left:25px;
+            }
+
+            #wrapperAddNewImage{
+                display:flex;
+                align-items:center;
+                justify-content:center;
+                margin-top:30px;
+            }
+
+            #AlignButtonAndTextButton{
+                display:flex;
+                flex-direction:row;
+                align-items:center;
+                justify-content:center;
+                padding:5px;
+            }
+
+            #buttonAddNewImage{
+                background-color:#83e85a;
+                font-size:100px;
+                border:none;
+                width:100px;
+                height:100px;
+                border-radius:50px;
+                margin-right:30px;
+                display:flex;
+                align-items:center;
+                justify-content:center;
+                cursor:pointer;
+                transition:0.5s;
+            }
+
+            #buttonAddNewImage:hover{
+                background-color:#13a856;
+            }
+
+            #aButtonAdd{
+                text-decoration:none;
+                color:#581b98;
+            }
+
+            .wrapperGalery{
+                display:flex;
+                align-items:center;
+                justify-content:center;
+                margin-top:20px;
+            }
+
+            .wrapperImages{
+                width:80%;
+                display:flex;
+                flex-direction:row;
+                flex-wrap:wrap;
+                justify-content:space-around;
+            }
+            
+            .cardImage{
+                border:3px solid #581b98;
+                border-radius:10px;
+                width:30%;
+                padding:30px 0;
                 display:flex;
                 flex-direction:column;
                 align-items:center;
                 justify-content:center;
-            }
-
-            #title{
-                color:#071e3d;
                 margin-top:15px;
-    
+                margin-bottom:15px;
+                flex-wrap:wrap;
             }
 
-            .wrapper-form{
-                background-color:#071e3d;
-                color:#fff;
-                width:40%;
-                display:flex;
-                flex-direction:column;
-                align-items:center;
-                padding:60px 0;
+            .imageGalery{
+                width:250px;
+                height:250px;
+                border-radius:10px;
                 margin-top:10px;
-                border-radius:20px;
             }
 
-            form{
+            .wrapperButtons{
                 display:flex;
-                flex-direction:column;
+                flex-direction:row;
                 align-items:center;
+                justify-content:center;
                 width:70%;
-            }
-
-            .form-group{
-                display:flex;
-                flex-direction:column;
-                width:60%;
-            }
-
-            #inputImageTitle{
-                background-color:transparent;
-                border:2px solid #22d1ee;
-                color:#22d1ee;
-                width:100%;
-                padding:7px 10px;
-                border-radius:10px;
-            }
-
-            #inputImageTitle:focus{
-                border:2px solid #a7ff83;
-                padding:10px;
-            }
-
-            #selectFilesInput{
-                border:2px solid #22d1ee;
-                padding:7px 10px;
-                border-radius:10px;
-                width:100%;
-            }
-
-            label{
                 margin-top:15px;
-                margin-bottom:5px;
             }
 
-            #buttonSendFiles{
+            .buttonEdit{
                 border:none;
-                background-color:#22d1ee;
-                padding:10px;
-                border-top-left-radius:15px;
-                border-bottom-right-radius:15px;
-                margin-top:30px;
-                width:60%;
+                background-color:#40514e;
+                color:#fff;
+                padding:10px 0;
+                width:45%;
+                border-radius:7px;
                 cursor:pointer;
                 transition:0.4s;
             }
 
-            #buttonSendFiles:hover{
-                background-color:#a7ff83;
+            .buttonEdit:hover{
+                background-color:#1e2121
             }
 
-            .erros-php{
-                color:#ff1493;
-                margin-top:15px;
-                font-size:25px;
-            }
-
-            #buttonViewGallery{
+            .buttonDelete{
                 border:none;
-                background-color:#fc5185;
-                padding:20px;
-                width:20%;
-                margin-top:30px;
-                border-radius:10px;
+                background-color:#db0404;
+                color:#fff;
+                padding:10px 0;
+                width:45%;
+                border-radius:7px;
                 cursor:pointer;
                 transition:0.4s;
             }
 
-            #buttonViewGallery:hover{
-                background-color:#bf368f;
+            .buttonDelete:hover{
+                background-color:#c94e4e;
             }
 
             a{
                 text-decoration:none;
                 color:#fff;
             }
-
+   
         </style>
 
     </head>
 
     <body>
 
-        <div class="wrapper">
+        <Header>
 
-            <h2 id="title">Galeria de Fotos</h2>
+            <h1>Minha Galeria</h1>
 
-            <div class="wrapper-form">
+            <img src="gallery.png" alt="Ícone Galeria" id="galleryIcon">
 
-                <h2>Adicione uma nova foto a sua galeria</h2>
+        </Header>
 
-                <form action="index.php" method="POST" enctype="multipart/form-data">
+        <div id="wrapperAddNewImage">
 
-                    <div class="form-group">
+            <div id="AlignButtonAndTextButton"> 
 
-                        <Label for="inputImageTitle">Título da Foto:</Label>
-                        <input type="text" name="imageTitle" id="inputImageTitle" required>
+                <button type="button" id="buttonAddNewImage">
+                    
+                    <a href="addNewImage.php" id="aButtonAdd">+</a>
+            
+                </button>
 
-                    </div>
-
-                    <div class="form-group">
-
-                        <label for="selectFilesInput">Escolha a sua foto:</label>
-                        <input type="file" name="selectFilesInput" id="selectFilesInput" required>
-
-                    </div>
-
-                    <div class="erros-php">
-
-                        <?php
-                            include_once 'sendFiles.php';
-                        ?>
-
-                    </div>
-
-                    <button type="submit" name="buttonSendFiles" id="buttonSendFiles">Adicionar Foto</button>
-
-                </form>
+                <h1>Adicionar uma nova imagem</h1>
 
             </div>
 
-            <button type="submit" name="buttonViewGallery" id="buttonViewGallery">
-            
-                <a href="myGallery.php">Ver Minha Galeria</a>
+        </div>
 
-            </button>
+        <div class="wrapperGalery">
+
+            <div class="wrapperImages">
+
+                <?php
+
+                    include_once 'showDataFromDB.php';
+                        
+                ?>
+
+            </div>
 
         </div>
 

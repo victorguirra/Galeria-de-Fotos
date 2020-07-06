@@ -176,6 +176,7 @@ if(isset($_GET['id'])){
 
                             if(mysqli_query($connect, $sql)){
                                 echo "Arquivo Atualiado com Sucesso";
+                                
                             }else{
                                 echo "Falha ao Atualizar o Arquivo!";
                             }
@@ -192,7 +193,7 @@ if(isset($_GET['id'])){
 
         <button type="submit" name="buttonViewGallery" id="buttonViewGallery">
         
-            <a href="myGallery.php">Ver Minha Galeria</a>
+            <a href="index.php">Ver Minha Galeria</a>
 
         </button>
 
