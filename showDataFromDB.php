@@ -20,6 +20,14 @@ $resultConsult = mysqli_query($connect, $consult) or die (mysqli_error($connect,
 
             <img src="Images/<?php echo $data['namePhoto'] ?>" class="imageGalery">
 
+            <div class="wrapperButtons">
+
+                <button class="buttonEdit">Editar<button>
+
+                <button class="buttonDelete">Apagar<button>
+
+            </div>
+
         </div>
 
 <?php

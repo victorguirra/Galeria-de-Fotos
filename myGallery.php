@@ -73,7 +73,6 @@
             }
 
             .wrapperGalery{
-                background-color:#ff1493;
                 display:flex;
                 align-items:center;
                 justify-content:center;
@@ -81,7 +80,6 @@
             }
 
             .wrapperImages{
-                background-color:#2690e7;
                 width:80%;
                 display:flex;
                 flex-direction:row;
@@ -90,14 +88,64 @@
             }
             
             .cardImage{
-                background-color:#ff0;
+                border:3px solid #581b98;
+                border-radius:10px;
+                width:25%;
+                padding:30px 0;
+                display:flex;
+                flex-direction:column;
+                align-items:center;
+                justify-content:center;
+                margin-top:30px;
+                flex-wrap:wrap;
             }
 
             .imageGalery{
-                width:120px;
-                height:120px;
-            }   
+                width:250px;
+                height:250px;
+                border-radius:10px;
+                margin-top:10px;
+            }
 
+            .wrapperButtons{
+                display:flex;
+                flex-direction:row;
+                align-items:center;
+                justify-content:center;
+                width:70%;
+                margin-top:15px;
+            }
+
+            .buttonEdit{
+                border:none;
+                background-color:#40514e;
+                color:#fff;
+                padding:10px 0;
+                width:45%;
+                border-radius:7px;
+                cursor:pointer;
+                transition:0.4s;
+            }
+
+            .buttonEdit:hover{
+                background-color:#1e2121
+            }
+
+            .buttonDelete{
+                border:none;
+                background-color:#db0404;
+                color:#fff;
+                padding:10px 0;
+                width:45%;
+                border-radius:7px;
+                cursor:pointer;
+                transition:0.4s;
+            }
+
+            .buttonDelete:hover{
+                background-color:#c94e4e;
+            }
+   
         </style>
 
     </head>
