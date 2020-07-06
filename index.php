@@ -1,3 +1,7 @@
+<?php
+    include_once 'uploadFiles.php';
+?>
+
 <html>
 
     <head>
@@ -112,7 +116,7 @@
 
                 <h2>Adicione uma nova foto a sua galeria</h2>
 
-                <form action="uploadFiles.php" method="POST">
+                <form action="index.php" method="POST">
 
                     <div class="form-group">
 
