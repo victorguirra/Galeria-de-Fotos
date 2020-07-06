@@ -20,9 +20,13 @@ $resultConsult = mysqli_query($connect, $consult) or die (mysqli_error($connect,
 
             <img src="Images/<?php echo $data['namePhoto'] ?>" class="imageGalery">
 
-            <div class="wrapperButtons">
+            <div class="wrapperButtons" method="POST">
 
-                <button class="buttonEdit">Editar<button>
+                <button class="buttonEdit">
+                
+                    <a href="editar.php?id=<?php echo $data['id'] ?>">Editar</a>
+                    
+                <button>
 
                 <button class="buttonDelete">Apagar<button>
 
@@ -32,7 +36,7 @@ $resultConsult = mysqli_query($connect, $consult) or die (mysqli_error($connect,
 
 <?php
 
-    }   
+    }       
 
 ?>
     

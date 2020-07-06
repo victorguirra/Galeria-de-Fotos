@@ -67,7 +67,7 @@
                 background-color:#13a856;
             }
 
-            a{
+            #aButtonAdd{
                 text-decoration:none;
                 color:#581b98;
             }
@@ -145,6 +145,11 @@
             .buttonDelete:hover{
                 background-color:#c94e4e;
             }
+
+            a{
+                text-decoration:none;
+                color:#fff;
+            }
    
         </style>
 
@@ -166,7 +171,7 @@
 
                 <button type="button" id="buttonAddNewImage">
                     
-                    <a href="index.php">+</a>
+                    <a href="index.php" id="aButtonAdd">+</a>
             
                 </button>
 
