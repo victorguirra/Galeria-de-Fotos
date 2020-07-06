@@ -159,7 +159,7 @@
                     <div class="erros-php">
 
                         <?php
-                            include_once 'uploadFiles.php';
+                            include_once 'sendFiles.php';
                         ?>
 
                     </div>
