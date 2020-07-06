@@ -1,3 +1,14 @@
+<?php
+
+include_once 'db_connect.php';
+
+if(isset($_GET['id'])){
+    $id = $_GET['id'];
+    $sql = "SELECT * FROM photos WHERE id = $id ";
+    $result = mysqli_query($connect, $sql);
+    $data = mysqli_fetch_array($result); 
+}
+?>
 
 <html>
 
@@ -84,7 +95,7 @@
             margin-bottom:5px;
         }
 
-        #buttonSendFiles{
+        #buttonUpdateFiles  {
             border:none;
             background-color:#22d1ee;
             padding:10px;
@@ -140,31 +151,40 @@
 
             <h2>Editar Arquivo da Galeria</h2>
 
-            <form action="index.php" method="POST" enctype="multipart/form-data">
+            <form action="edit.php" method="POST" enctype="multipart/form-data">
 
                 <div class="form-group">
+
+                    <input type="hidden" name="id" value="<?php echo $data['id'] ?>">
 
                     <Label for="inputImageTitle">Novo Título da Foto:</Label>
-                    <input type="text" name="imageTitle" id="inputImageTitle" required>
-
-                </div>
-
-                <div class="form-group">
-
-                    <label for="selectFilesInput">Escolha a sua Nova foto:</label>
-                    <input type="file" name="selectFilesInput" id="selectFilesInput" required>
+                    <input type="text" name="imageTitle" id="inputImageTitle" value="<?php echo $data['titlePhoto'] ?>" required>
 
                 </div>
 
                 <div class="erros-php">
 
                     <?php
-                        
+
+                        include_once 'db_connect.php';
+
+                        if(isset($_POST['buttonUpdateFiles'])){
+                            
+                            $imageTitle = $_POST['imageTitle'];
+                            $id = $_POST['id'];
+                            $sql = "UPDATE photos SET titlePhoto = '$imageTitle' WHERE id = $id";
+
+                            if(mysqli_query($connect, $sql)){
+                                echo "Arquivo Atualiado com Sucesso";
+                            }else{
+                                echo "Falha ao Atualizar o Arquivo!";
+                            }
+                        }
                     ?>
 
                 </div>
 
-                <button type="submit" name="buttonSendFiles" id="buttonSendFiles">Editar Arquivo</button>
+                <button type="submit" name="buttonUpdateFiles" id="buttonUpdateFiles">Editar Arquivo</button>
 
             </form>
 
