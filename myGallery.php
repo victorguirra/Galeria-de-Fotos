@@ -77,6 +77,7 @@
                 display:flex;
                 align-items:center;
                 justify-content:center;
+                margin-top:20px;
             }
 
             .wrapperImages{
@@ -86,7 +87,7 @@
                 flex-direction:row;
                 flex-wrap:wrap;
                 justify-content:space-around;
-            }
+            }   
 
         </style>
 
