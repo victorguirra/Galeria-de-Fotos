@@ -1,6 +1,3 @@
-<?php
-    include_once 'uploadFiles.php';
-?>
 
 <html>
 
@@ -102,6 +99,12 @@
                 background-color:#a7ff83;
             }
 
+            .erros-php{
+                color:#ff1493;
+                margin-top:15px;
+                font-size:25px;
+            }
+
         </style>
 
     </head>
@@ -116,7 +119,7 @@
 
                 <h2>Adicione uma nova foto a sua galeria</h2>
 
-                <form action="index.php" method="POST">
+                <form action="index.php" method="POST" enctype="multipart/form-data">
 
                     <div class="form-group">
 
@@ -132,7 +135,15 @@
 
                     </div>
 
-                    <button type="submit📂" name="buttonSendFiles" id="buttonSendFiles">Adicionar Foto</button>
+                    <div class="erros-php">
+
+                        <?php
+                            include_once 'uploadFiles.php';
+                        ?>
+
+                    </div>
+
+                    <button type="submit" name="buttonSendFiles" id="buttonSendFiles">Adicionar Foto</button>
 
                 </form>
 

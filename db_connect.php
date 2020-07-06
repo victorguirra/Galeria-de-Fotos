@@ -3,7 +3,7 @@
 $serverName = "localhost";
 $userName = "root";
 $password = "";
-$db_name = "photo_gallery";
+$db_name = "gallery_photo";
 
 $connect = mysqli_connect($serverName, $userName, $password, $db_name);
 
