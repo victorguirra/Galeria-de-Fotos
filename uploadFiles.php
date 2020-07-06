@@ -11,7 +11,7 @@ if(isset($_POST['buttonSendFiles'])){
     if(in_array($extension, $allowedFormat)){
         
         $newName = uniqid().".".$extension;
-        $directory = "../Images";
+        $directory = "../Images/";
         
         move_uploaded_file($_FILES['selectFilesInput']['tmp_name'], $directory.$newName,);
 
