@@ -71,6 +71,23 @@
                 text-decoration:none;
                 color:#581b98;
             }
+
+            .wrapperGalery{
+                background-color:#ff1493;
+                display:flex;
+                align-items:center;
+                justify-content:center;
+            }
+
+            .wrapperImages{
+                background-color:#2690e7;
+                width:80%;
+                display:flex;
+                flex-direction:row;
+                flex-wrap:wrap;
+                justify-content:space-around;
+            }
+
         </style>
 
     </head>
@@ -96,6 +113,16 @@
                 </button>
 
                 <h1>Adicionar uma nova imagem</h1>
+
+            </div>
+
+        </div>
+
+        <div class="wrapperGalery">
+
+            <div class="wrapperImages">
+
+                
 
             </div>
 
