@@ -128,7 +128,7 @@
 
                     </div>
 
-                    <button type="submit" name="buttonSendFiles" id="buttonSendFiles">Adicionar Foto</button>
+                    <button type="submit📂" name="buttonSendFiles" id="buttonSendFiles">Adicionar Foto</button>
 
                 </form>
 
