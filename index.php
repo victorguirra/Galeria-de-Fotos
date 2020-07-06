@@ -24,6 +24,7 @@
                 display:flex;
                 flex-direction:column;
                 align-items:center;
+                justify-content:center;
             }
 
             #title{
@@ -39,7 +40,7 @@
                 display:flex;
                 flex-direction:column;
                 align-items:center;
-                padding:20px 0;
+                padding:60px 0;
                 margin-top:10px;
                 border-radius:20px;
             }
@@ -105,6 +106,26 @@
                 font-size:25px;
             }
 
+            #buttonViewGallery{
+                border:none;
+                background-color:#fc5185;
+                padding:20px;
+                width:20%;
+                margin-top:30px;
+                border-radius:10px;
+                cursor:pointer;
+                transition:0.5s;
+            }
+
+            #buttonViewGallery:hover{
+                background-color:#bf368f;
+            }
+
+            a{
+                text-decoration:none;
+                color:#fff;
+            }
+
         </style>
 
     </head>
@@ -148,6 +169,12 @@
                 </form>
 
             </div>
+
+            <button type="submit" name="buttonViewGallery" id="buttonViewGallery">
+            
+                <a href="">Ver Minha Galeria</a>
+
+            </button>
 
         </div>
 
